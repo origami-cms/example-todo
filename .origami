@@ -1,0 +1,19 @@
+{
+    "app": {
+        "name": "origami-example-todo-app"
+    },
+    "server": {
+        "port": 9999,
+        "secret": "e5df1ac2da01ed785685dbd75ec74ba5"
+    },
+    "store": {
+        "type": "lowdb",
+        "database": "./todo-db.json"
+    },
+    "resources": {
+        "item": {
+            "model": "./resources/TodoItem.js",
+            "auth": false
+        }
+    }
+}

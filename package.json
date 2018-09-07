@@ -1,0 +1,9 @@
+{
+    "name": "origami-example-todo-app-chapter-1",
+    "dependencies": {
+        "origami-cms": "^0.2.16-alpha.1",
+        "origami-store-base": "^0.0.1-alpha.0",
+        "origami-store-lowdb": "^0.0.1-alpha.0"
+    },
+    "scripts": {}
+}
