@@ -1,4 +1,11 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,600");
+.todo ul.todo-items:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
 form input[type="submit"], form zen-ui-button, zen-ui-button, button, .button, input[type='submit'] {
   display: inline-block;
   width: auto;
@@ -3656,3 +3663,51 @@ hr {
     transform: translateY(0px); }
   to {
     transform: translateY(-15px); } }
+
+.todo header {
+  display: flex; }
+  .todo header h3 {
+    flex-grow: 1; }
+
+.todo.loading ul.todo-items:before {
+  content: 'Loading…'; }
+
+.todo.loaded ul.todo-items:empty:before {
+  content: 'No items yet!'; }
+
+.todo ul.todo-items {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  margin: var(--size-small) 0;
+  overflow-y: auto; }
+  .todo ul.todo-items:before {
+    display: block;
+    color: var(--color-grey-300);
+    text-align: center; }
+  .todo ul.todo-items li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--size-tiny);
+    animation: fade-in 1s ease-out; }
+    .todo ul.todo-items li zen-checkbox {
+      --checkbox-color-active: var(--color-grey-300); }
+    .todo ul.todo-items li zen-input {
+      margin-left: var(--size-small);
+      margin-right: var(--size-tiny);
+      --input-height: var(--size-main); }
+    .todo ul.todo-items li:before {
+      content: '';
+      position: absolute;
+      left: 4rem;
+      right: calc(100% - 4rem);
+      top: 50%;
+      height: 0.2rem;
+      background: var(--color-grey-200);
+      z-index: 100; }
+    .todo ul.todo-items li.completed * {
+      opacity: 0.5; }
+    .todo ul.todo-items li.completed:before {
+      transition: all var(--transition-time);
+      right: 4rem; }

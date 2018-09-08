@@ -2004,15 +2004,15 @@ origami-bird@^1.0.0:
   dependencies:
     colors "^1.1.2"
 
-origami-cms@^0.2.16-alpha.1:
-  version "0.2.16-alpha.1"
-  resolved "https://registry.yarnpkg.com/origami-cms/-/origami-cms-0.2.16-alpha.1.tgz#9bf366977ffe2b4e13f337d1ffdc36bfbd052fd8"
+origami-cms@^0.2.16-alpha.4:
+  version "0.2.16-alpha.4"
+  resolved "https://registry.yarnpkg.com/origami-cms/-/origami-cms-0.2.16-alpha.4.tgz#77727573706aa41a58387cd66ece577d94552c50"
   dependencies:
     express "^4.16.2"
     origami-admin-zen "^0.0.10-alpha.6"
     origami-bird "^1.0.0"
-    origami-core-lib "^0.3.13-alpha.7"
-    origami-core-server "^0.5.3-alpha.7"
+    origami-core-lib "^0.3.13"
+    origami-core-server "^0.5.3-alpha.9"
     origami-store-mongodb "^0.1.2"
     origami-theme-snow "^0.0.3"
 
@@ -2027,6 +2027,19 @@ origami-core-lib@^0.3.12, origami-core-lib@^0.3.4, origami-core-lib@^0.3.5:
     find-root "^1.1.0"
     import-from "^2.1.0"
     jsonwebtoken "^8.3.0"
+
+origami-core-lib@^0.3.13:
+  version "0.3.13"
+  resolved "https://registry.yarnpkg.com/origami-core-lib/-/origami-core-lib-0.3.13.tgz#8e14475f10e530493c67316d6e7ea60235b76980"
+  dependencies:
+    "@types/express" "^4.11.1"
+    bcrypt "^2.0.1"
+    deepmerge "^2.1.1"
+    dot-object "^1.7.0"
+    find-root "^1.1.0"
+    import-from "^2.1.0"
+    jsonwebtoken "^8.3.0"
+    marked "^0.3.6"
 
 origami-core-lib@^0.3.13-alpha.7:
   version "0.3.13-alpha.7"
@@ -2104,9 +2117,9 @@ origami-core-server@^0.4.2:
     request-promise-native "^1.0.5"
     routington "^1.0.3"
 
-origami-core-server@^0.5.3-alpha.7:
-  version "0.5.3-alpha.7"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.3-alpha.7.tgz#36f1d99ee9e872512f5f95baecc3adb36b3710ef"
+origami-core-server@^0.5.3-alpha.9:
+  version "0.5.3-alpha.9"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.5.3-alpha.9.tgz#1ef4baecfd345ebde58890b36d738ce32d4f5b4d"
   dependencies:
     colors "^1.1.2"
     corser "^2.0.1"
@@ -2120,7 +2133,6 @@ origami-core-server@^0.5.3-alpha.7:
     marked "^0.3.6"
     npm-programmatic "^0.0.10"
     origami-core-lib "^0.3.13-alpha.7"
-    origami-core-server "^0.3.7"
     origami-core-server-statuses "^0.0.8"
     origami-plugin-auth "^1.0.2-alpha.1"
     origami-plugin-core-api "^0.1.5-alpha.0"
@@ -2176,12 +2188,21 @@ origami-store-base@^0.0.1-alpha.0:
     clone "^2.1.2"
     origami-core-lib "^0.3.13-alpha.7"
 
-origami-store-lowdb@^0.0.1-alpha.0:
-  version "0.0.1-alpha.0"
-  resolved "https://registry.yarnpkg.com/origami-store-lowdb/-/origami-store-lowdb-0.0.1-alpha.0.tgz#6b69526a12dca2e4d5213f7e823abc1c3f37beb3"
+origami-store-base@^0.0.1-alpha.1:
+  version "0.0.1-alpha.1"
+  resolved "https://registry.yarnpkg.com/origami-store-base/-/origami-store-base-0.0.1-alpha.1.tgz#6a00332edb293c676a5c0656ccfa1738c5c2003b"
+  dependencies:
+    "@types/clone" "^0.1.30"
+    clone "^2.1.2"
+    origami-core-lib "^0.3.13-alpha.7"
+
+origami-store-lowdb@^0.0.1-alpha.4:
+  version "0.0.1-alpha.4"
+  resolved "https://registry.yarnpkg.com/origami-store-lowdb/-/origami-store-lowdb-0.0.1-alpha.4.tgz#279148200f4a54badbcf66fe1ac4a233763f7cc7"
   dependencies:
     lodash-id "^0.14.0"
     lowdb "^1.0.0"
+    origami-store-base "^0.0.1-alpha.1"
     validator "^10.7.1"
 
 origami-store-mongodb@^0.1.2:
@@ -2197,9 +2218,9 @@ origami-theme-snow@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/origami-theme-snow/-/origami-theme-snow-0.0.3.tgz#29cbc6ac65e13d7fb7d299e624d1c8e4da57d424"
 
-origami-zen@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/origami-zen/-/origami-zen-0.4.1.tgz#f1bd67f8a107bb4231f0041bbba2a574370cac01"
+origami-zen@^0.4.3-alpha.0:
+  version "0.4.3-alpha.0"
+  resolved "https://registry.yarnpkg.com/origami-zen/-/origami-zen-0.4.3-alpha.0.tgz#33234cd270a82384efd1408158650b47035ae81a"
 
 os-homedir@^1.0.0:
   version "1.0.2"

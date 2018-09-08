@@ -1,1 +1,73 @@
 @import 'zen-css/base';
+
+
+
+.todo {
+    header {
+        display: flex;
+        h3 {
+            flex-grow: 1;
+        }
+    }
+
+    &.loading ul.todo-items:before {
+        content: 'Loading…';
+    }
+
+    &.loaded ul.todo-items:empty:before {
+        content: 'No items yet!';
+    }
+
+    ul.todo-items {
+        position: relative;
+        width: 30rem;
+        height: 30rem;
+        margin: var(--size-small) 0;
+        overflow-y: auto;
+
+        &:before {
+            display: block;
+            color: var(--color-grey-300);
+            text-align: center;
+            @extend %center;
+        }
+
+        li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--size-tiny);
+            animation: fade-in 1s ease-out;
+
+            zen-checkbox {
+                --checkbox-color-active: var(--color-grey-300);
+            }
+            zen-input {
+                margin-left: var(--size-small);
+                margin-right: var(--size-tiny);
+                --input-height: var(--size-main);
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 4rem;
+                right: calc(100% - 4rem);
+                top: 50%;
+                height: 0.2rem;
+                background: var(--color-grey-200);
+                z-index: 100;
+            }
+
+            &.completed {
+                & * {
+                    opacity: 0.5;
+                }
+                &:before {
+                    transition: all var(--transition-time);
+                    right: 4rem;
+                }
+            }
+        }
+    }
+}

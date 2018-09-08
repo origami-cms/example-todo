@@ -6,22 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Origami example - Todo App</title>
     <link rel="stylesheet" href="/todo-app.css">
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-loader.js"></script>
 </head>
 <body>
+    <zen-icon-set></zen-icon-set>
+
     <template id="todo-item">
         <li class="todo-item">
             <zen-checkbox></zen-checkbox>
             <zen-input></zen-input>
-            <zen-icon type="cross"></zen-icon>
+            <zen-icon type="cross" color="grey-200"></zen-icon>
         </li>
     </template>
 
     <div class="todo center card">
-        <h3 class="text-center">Todo List</h3>
+        <header>
+            <h3>Todo List</h3>
+            <zen-button class="padding-none" hollow="true" color="active">Clear</zen-button>
+        </header>
         <ul class="todo-items"></ul>
-        <zen-input placeholder="Your next task…"></zen-input>
+        <zen-input class="new-todo" placeholder="Your next task…"></zen-input>
     </div>
-    <zen-icon-set></zen-icon-set>
 
     <script src="/todo-app.min.js"></script>
 </body>
