@@ -2,6 +2,7 @@ import 'origami-zen/components/IconSet/IconSet';
 import 'origami-zen/components/Icon/Icon';
 import 'origami-zen/components/Checkbox/Checkbox';
 import 'origami-zen/components/Input/Input';
+import 'origami-zen/components/Button/Button';
 
 class TodoList {
     constructor(container) {
