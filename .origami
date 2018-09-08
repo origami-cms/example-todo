@@ -4,7 +4,8 @@
     },
     "server": {
         "port": 9999,
-        "secret": "e5df1ac2da01ed785685dbd75ec74ba5"
+        "secret": "e5df1ac2da01ed785685dbd75ec74ba5",
+        "static": "./public"
     },
     "store": {
         "type": "lowdb",

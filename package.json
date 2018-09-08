@@ -1,9 +1,21 @@
 {
     "name": "origami-example-todo-app-chapter-1",
+    "scripts": {
+        "build:sass": "node-sass src/sass/ -o public/ --include-path ./node_modules",
+        "build:js": "rollup src/todo-app.js -o public/todo-app.js --format iife",
+        "build": "yarn build:sass & yarn build:js"
+    },
     "dependencies": {
         "origami-cms": "^0.2.16-alpha.1",
         "origami-store-base": "^0.0.1-alpha.0",
         "origami-store-lowdb": "^0.0.1-alpha.0"
     },
-    "scripts": {}
+    "devDependencies": {
+        "node-sass": "^4.9.3",
+        "origami-zen": "^0.4.1",
+        "rollup": "^0.65.2",
+        "rollup-plugin-commonjs": "^9.1.6",
+        "rollup-plugin-node-resolve": "^3.4.0",
+        "zen-css": "^1.1.14"
+    }
 }
