@@ -17,12 +17,10 @@ class TodoList {
     }
 
 
-    // Sets up adding a new item for the text field when Enter is pressed
+    // Sets up adding a new item for the text field when 'Enter' is pressed
     setup() {
         this.container.querySelector('.new-todo')
             .addEventListener('keyup', e => {
-                console.log(e.code);
-
                 if (e.code !== 'Enter') return;
 
                 this.createItem(e.target.value);
@@ -36,15 +34,13 @@ class TodoList {
 
     // Retrieve a list of the items, then adds them into the list
     async getItems() {
-        this.container.classList.add('loading');
-        console.log(this.container.classList);
+        this.container.classList.add('loading')
 
 
         const res = await fetch(`${this.API}/items`, {
             method: 'get',
             headers: {'content-type': 'application/json'}
         }).then(r => r.json());
-        console.log('after');
 
 
         this.container.classList.remove('loading');
@@ -70,19 +66,17 @@ class TodoList {
         checkbox.checked = Boolean(item.completed);
 
         // Wrap in a timeout so the change handlers don't fire straight away
-        setTimeout(() => {
-            input.addEventListener('change', (e) => {
-                this.updateItem(item.id, {text: e.target.value});
-            });
+        input.addEventListener('change', (e) => {
+            this.updateItem(item.id, {text: e.target.value});
+        });
 
-            checkbox.addEventListener('change', (e) => {
-                this.checkoffItem(item.id, e.target.checked);
-            });
+        checkbox.addEventListener('change', (e) => {
+            this.checkoffItem(item.id, e.target.checked);
+        });
 
-            li.classList.toggle('completed', Boolean(item.completed));
+        li.classList.toggle('completed', Boolean(item.completed));
 
-            remove.addEventListener('click', () => this.removeItem(item.id));
-        }, 2);
+        remove.addEventListener('click', () => this.removeItem(item.id));
     }
 
 
@@ -120,6 +114,7 @@ class TodoList {
     }
 
 
+    // Removes an item from the list, and deletes in the API
     async removeItem(id) {
         const res = await fetch(`${this.API}/items/${id}`, {
             method: 'delete',
@@ -130,6 +125,7 @@ class TodoList {
     }
 
 
+    // Loops over all completed items and removes them
     async clearCompleted() {
         Array.from(this.container.querySelectorAll('li.completed'))
             .map(li => li.id)

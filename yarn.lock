@@ -2218,9 +2218,9 @@ origami-theme-snow@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/origami-theme-snow/-/origami-theme-snow-0.0.3.tgz#29cbc6ac65e13d7fb7d299e624d1c8e4da57d424"
 
-origami-zen@^0.4.3-alpha.0:
-  version "0.4.3-alpha.0"
-  resolved "https://registry.yarnpkg.com/origami-zen/-/origami-zen-0.4.3-alpha.0.tgz#33234cd270a82384efd1408158650b47035ae81a"
+origami-zen@^0.4.3-alpha.1:
+  version "0.4.3-alpha.1"
+  resolved "https://registry.yarnpkg.com/origami-zen/-/origami-zen-0.4.3-alpha.1.tgz#964b3d79da9a239f8f14d8b05b64fefcfa1e99b4"
 
 os-homedir@^1.0.0:
   version "1.0.2"

@@ -13,7 +13,7 @@
     },
     "devDependencies": {
         "node-sass": "^4.9.3",
-        "origami-zen": "^0.4.3-alpha.0",
+        "origami-zen": "^0.4.3-alpha.1",
         "rollup": "^0.65.2",
         "rollup-plugin-commonjs": "^9.1.6",
         "rollup-plugin-node-resolve": "^3.4.0",
